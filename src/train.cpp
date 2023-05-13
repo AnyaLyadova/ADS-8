@@ -49,7 +49,7 @@ int Train::getLength() {
   if (!current->light) {
     return result;
   } else {
-      getLength();
+      return getLength();
     }
 }
 
