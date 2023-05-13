@@ -2,7 +2,6 @@
 #include "train.h"
 Train::Train() {
   first = nullptr;
-  current = nullptr;
   countOp = 0;
 }
 
@@ -32,7 +31,7 @@ int Train::getLength() {
   if (!first->light) {
     first->light = true;
   }
-  current = first->next;
+  Cage* current = first->next;
   ++cage_count;
   ++countOp;
   while (!current->light) {
